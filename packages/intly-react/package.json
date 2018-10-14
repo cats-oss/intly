@@ -1,0 +1,45 @@
+{
+  "name": "intly-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "echo 'TEST'",
+    "prepublish": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cats-oss/intly.git"
+  },
+  "homepage": "https://github.com/cats-oss/intly#readme",
+  "bugs": {
+    "url": "https://github.com/cats-oss/intly/issues"
+  },
+  "author": "Cyberagent, Inc",
+  "license": "MIT",
+  "keywords": [
+    "intly",
+    "internationalization",
+    "i18n",
+    "intl",
+    "translation",
+    "localization",
+    "globalization",
+    "type-safe",
+    "ts",
+    "type-script",
+    "react"
+  ],
+  "devDependencies": {
+    "@types/react": "^16.4.16",
+    "intly": "0.0.0",
+    "react": "^16.5.2",
+    "typescript": "^3.1.1"
+  },
+  "peerDependencies": {
+    "intly": "0.0.0",
+    "react": ">=16.0.0"
+  }
+}

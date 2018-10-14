@@ -1,0 +1,2 @@
+examples/react-client/build/**/*
+packages/*/lib/**/*

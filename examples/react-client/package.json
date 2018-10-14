@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "intly-example-react-client",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "true"
+  },
+  "dependencies": {
+    "intly": "0.0.0",
+    "intly-react": "0.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts-ts": "3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.3",
+    "@types/node": "^10.11.4",
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.8",
+    "typescript": "^3.1.1"
+  }
+}

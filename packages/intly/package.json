@@ -1,0 +1,43 @@
+{
+  "name": "intly",
+  "version": "0.0.0",
+  "description": "intly is Type-safe (TS friendly) i18n library.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "jest",
+    "prepublish": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cats-oss/intly.git"
+  },
+  "homepage": "https://github.com/cats-oss/intly#readme",
+  "bugs": {
+    "url": "https://github.com/cats-oss/intly/issues"
+  },
+  "author": "Cyberagent, Inc",
+  "license": "MIT",
+  "keywords": [
+    "intly",
+    "internationalization",
+    "i18n",
+    "intl",
+    "translation",
+    "localization",
+    "globalization",
+    "type-safe",
+    "ts",
+    "type-script"
+  ],
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "mitt": "^1.1.3"
+  }
+}

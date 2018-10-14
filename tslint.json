@@ -1,0 +1,35 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-config-prettier", "tslint-microsoft-contrib"],
+  "rules": {
+    "no-suspicious-comment": false,
+    "no-any": false,
+    "no-unsafe-any": false,
+    "missing-jsdoc": false,
+    "completed-docs": false,
+    "ordered-imports": false,
+    "no-submodule-imports": false,
+    "no-object-literal-type-assertion": false,
+    "member-ordering": false,
+    "import-name": false,
+    "export-name": false,
+    "interface-name": false,
+    "function-name": false,
+    "variable-name": false,
+    "typedef": false,
+    "prefer-type-cast": false,
+    "no-angle-bracket-type-assertion": true,
+    "no-relative-imports": false,
+    "no-reserved-keywords": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": ["properties", "exports", "functions", "imports", "typeLiterals"],
+        "singleline": "never"
+      }
+    ],
+    "mocha-no-side-effect-code": false
+  },
+  "rulesDirectory": []
+}

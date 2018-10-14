@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "intly-example-react-ssr",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node dist/server/index.js",
+    "serve": "nodemon",
+    "dev": "npm-run-all -p watch serve",
+    "build": "npm-run-all -p build:*",
+    "build:client": "webpack-cli --config webpack.config.js",
+    "build:server": "tsc -p .",
+    "watch": "npm-run-all -p watch:*",
+    "watch:client": "yarn build:client --watch",
+    "watch:server": "yarn build:server --watch",
+    "test": "true"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "express": "^4.16.3",
+    "glob": "^7.1.3",
+    "intly": "0.0.0",
+    "intly-react": "0.0.0",
+    "nodemon": "^1.18.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^3.4.10",
+    "ts-loader": "^5.2.1",
+    "webpack": "^4.20.2",
+    "webpack-clean-obsolete-chunks": "^0.4.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.8",
+    "glob": "^7.1.3",
+    "npm-run-all": "^4.1.3",
+    "typescript": "^3.1.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/**/node_modules",
+      "src/**/*"
+    ],
+    "delay": "250"
+  }
+}
