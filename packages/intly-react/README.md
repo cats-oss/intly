@@ -28,7 +28,7 @@ ReactDOM.render(
   <IntlyHandler>
     <h1>{intly.t('hello')}</h1>
   </IntlyHandler>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 ```
 

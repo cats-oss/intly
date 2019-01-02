@@ -101,10 +101,11 @@ describe('intly', () => {
       'en',
       {
         'text.hello': 'Hello World!',
-        'fn.default': (): string => 'A function without arguments.',
+        'fn.default': () => 'A function without arguments.',
         'fn.string': (s: string) => `"${s}"`,
-        'fn.boolean': (b: boolean): string => (b ? 'true' : 'false'),
+        'fn.boolean': (b: boolean) => (b ? 'true' : 'false'),
         'fn.object': ({ first, last }: { first: string; last: string }) => `Hi, ${first} ${last}!`,
+        'fn.args': (x: number, y: number) => `x=${x}, y=${y}`,
         'num.days': nf('{{count}} days', {
           replacement: {
             1: 'a day',
@@ -136,6 +137,7 @@ describe('intly', () => {
     expect(intly.t('fn.boolean', true)).toBe('true');
     expect(intly.t('fn.boolean', false)).toBe('false');
     expect(intly.t('fn.object', { first: 'firstname', last: 'lastname' })).toBe('Hi, firstname lastname!');
+    expect(intly.t('fn.args', 10, 20)).toBe('x=10, y=20');
     expect(intly.t('num.days', { count: 1 })).toBe('a day');
     expect(intly.t('num.days', { count: 3 })).toBe('3 days');
     expect(intly.t('num.days', { count: 10000 })).toBe('10000 days');
@@ -150,7 +152,7 @@ describe('intly', () => {
     intly
       .addDictionary('ja', {
         'text.hello': 'こんにちは世界!',
-        'fn.boolean': (b: boolean): string => (b ? '真' : '偽'),
+        'fn.boolean': (b: boolean) => (b ? '真' : '偽'),
       })
       .setLanguage('ja');
 

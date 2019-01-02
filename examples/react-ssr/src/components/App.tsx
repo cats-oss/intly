@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { intly } from '../i18n';
-import '../styles'; // tslint:disable-line: no-import-side-effect
+import { GlobalStyle } from '../styles';
 import { Container } from './Container';
 
 const NEWLINE_REG = /(\r\n|\r|\n)/g;
@@ -13,6 +13,8 @@ const year = new Date().getFullYear();
 
 export const App = () => (
   <main>
+    <GlobalStyle />
+
     <header>
       <Container>
         <h1>{intly.t('header.title')}</h1>
