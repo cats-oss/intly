@@ -1,15 +1,15 @@
 {
   "private": true,
   "name": "intly-example-react-client",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "true"
   },
   "dependencies": {
-    "intly": "^0.0.1-alpha.0",
-    "intly-react": "^0.0.1-alpha.0",
+    "intly": "^0.0.1-alpha.1",
+    "intly-react": "^0.0.1-alpha.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts-ts": "3.1.0"
