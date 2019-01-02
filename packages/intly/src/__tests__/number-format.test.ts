@@ -12,7 +12,6 @@ describe('number-format', () => {
       ['{{count}}pt', {}, { count: 123456789, language: 'en' }, '123,456,789pt'],
       ['{{count}}pt', {}, { count: 123456789, language: 'jp' }, '123,456,789pt'],
       ['{{count}}', { style: 'currency', currency: 'USD' }, { count: 123456789, language: 'en' }, '$123,456,789.00'],
-      ['{{count}}', { style: 'currency', currency: 'JPY' }, { count: 123456789, language: 'jp' }, '¥123,456,789'],
       ['{{count}}', { minimumFractionDigits: 1 }, { count: 123456789, language: 'en' }, '123,456,789.0'],
       ['{{count}}', { minimumFractionDigits: 1 }, { count: 123456789, language: 'jp' }, '123,456,789.0'],
     ];

@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-// tslint:disable-next-line: no-unused-expression
-injectGlobal`
+// tslint:disable: max-line-length
+export const GlobalStyle = createGlobalStyle`
   :root {
     color: #444;
     font-family: "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

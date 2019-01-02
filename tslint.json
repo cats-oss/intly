@@ -22,6 +22,7 @@
     "no-relative-imports": false,
     "no-reserved-keywords": false,
     "quotemark": [true, "single", "jsx-double"],
+    "newline-per-chained-call": false,
     "trailing-comma": [
       true,
       {

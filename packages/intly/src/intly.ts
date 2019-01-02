@@ -3,7 +3,7 @@ import { EventHandler, IntlyEvent } from './events';
 import { NumberFormatter, NumberFormatArgs, NumberFormatOptions } from './number-format';
 import { IntlyMiddleware, PostProcessor } from './middlewares';
 import { Options, PartialOptions, defaultOptions } from './options';
-import { AbstractDictionary, TranslateArgs, TranslateFunc, PickTranslateFuncArgs } from './types';
+import { AbstractDictionary, TranslateArgs, PartialDictionary } from './types';
 import { toArray } from './utils';
 
 type DictionaryMap<T> = { [language: string]: T };
@@ -80,8 +80,8 @@ export class Intly<T extends AbstractDictionary> {
     return this;
   }
 
-  public addDictionary(language: string, dictionary: Partial<T>): Intly<T> {
-    const dict = dictionary as T;
+  public addDictionary(language: string, dictionary: PartialDictionary<T>): Intly<T> {
+    const dict = dictionary as any;
 
     this.dictionaryMap[language] = dict;
 
@@ -102,7 +102,7 @@ export class Intly<T extends AbstractDictionary> {
     return this;
   }
 
-  public t<K extends keyof T>(key: K, args?: TranslateArgs<T[K]>): string {
+  public t<K extends keyof T>(key: K, ...args: TranslateArgs<T[K]>): string {
     const value = this.getTranslate(key);
     let result: string;
 
@@ -114,10 +114,10 @@ export class Intly<T extends AbstractDictionary> {
 
       result = value.format({
         language: this.languages,
-        ...(args as NumberFormatArgs),
+        ...(args as [NumberFormatArgs])[0],
       });
     } else if (typeof value === 'function') {
-      result = (value as TranslateFunc<T[K]>)(args as PickTranslateFuncArgs<T[K]>);
+      result = (value as Function)(...args);
     } else {
       result = value as string;
     }
